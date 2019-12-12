@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'BlogController@index');
+
+Route::get('posts/index', function () {
+    return view('posts/index');
+})->name('posts/index');
+
